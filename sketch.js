@@ -59,7 +59,7 @@ function draw() {
   background(230);
   Engine.update(engine);
   textSize(25);
-  text("Lauch the stone when mouse is released!!",50 ,50);
+  text("Launch the stone when mouse is released!!",50 ,50);
   image(boy ,100,240,200,300);
   
 
