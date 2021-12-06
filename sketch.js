@@ -59,13 +59,13 @@ function draw() {
   background(230);
   Engine.update(engine);
   textSize(25);
-  text("Hit the mangoes with the stone!!",50 ,50);
+  text("Lauch the stone when mouse is released!!",50 ,50);
   image(boy ,100,240,200,300);
   
 
   tree.display();
   stone.display();
-  ground.display();
+ 
 
   mango1.display();
   mango2.display();
@@ -78,19 +78,10 @@ function draw() {
   
   stone.display();
  
-  ground.display();
   launcher.display();
 
 
-  detectollision(stone,mango1);
-  detectollision(stone,mango2);
-  detectollision(stone,mango3);
-  detectollision(stone,mango4);
-  detectollision(stone,mango5);
-  detectollision(stone,mango6);
-  detectollision(stone,mango7);
-  detectollision(stone,mango8);
-  detectollision(stone,mango9);
+
 }
 
 
@@ -102,16 +93,3 @@ function mouseReleased()
 	
 }
 
-
-function detectollision(lstone,lmango){
-
-  mangoBodyPosition=lmango.body.position
-  stoneBodyPosition=lstone.body.position
-  
-  var distance=dist(stoneBodyPosition.x, stoneBodyPosition.y, mangoBodyPosition.x, mangoBodyPosition.y)
-  	if(distance<=lmango.r+lstone.r)
-    {
-  	  Matter.Body.setStatic(lmango.body,false);
-    }
-
-  }
