@@ -60,7 +60,7 @@ function draw() {
   Engine.update(engine);
   textSize(25);
   text("Launch the stone when mouse is released!!",30 ,50);
-  text("Press space to catch the stone!!",30 ,50);
+  text("Press space to catch the stone!!",30 ,100);
   image(boy ,100,240,200,300);
   
 
