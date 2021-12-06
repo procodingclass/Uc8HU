@@ -59,7 +59,7 @@ function draw() {
   background(230);
   Engine.update(engine);
   textSize(25);
-  text("Launch the stone when mouse is released!!",50 ,50);
+  text("Launch the stone when mouse is released!!",30 ,50);
   image(boy ,100,240,200,300);
   
 
@@ -83,7 +83,12 @@ function draw() {
 
 
 }
-
+function keyPressed(){
+  if(keyCode === 32){
+    
+    launcher.attach(stone.body);
+  }
+}
 
 function mouseReleased()
 {
