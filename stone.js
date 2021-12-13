@@ -9,7 +9,7 @@ class Stone
 		this.y=y;
 		this.r=r
 		this.image=loadImage("stone.png");
-		this.body=Bodies.circle(this.x, this.y, this.r, options);
+		this.body=Bodies.rectangle(this.x, this.y, this.r, this.r,options);
 		World.add(world, this.body);
 
 	}
@@ -19,7 +19,8 @@ class Stone
 			push()
 			translate(stonepos.x, stonepos.y);
 			imageMode(CENTER);
-			image(this.image, 0,0,this.r*2, this.r*2)
+			image(this.image, 0,0,this.r, this.r)
+			
 			pop();
 			
 	}

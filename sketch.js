@@ -26,18 +26,18 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	stone = new Stone(135,320,30); 
+	stone = new Stone(135,320,40); 
  
 
-	mango1 = new Mango(700,100,20);
-  mango2 = new Mango(760,130,20);
-	mango3 = new Mango(710,140,20);
-	mango4 = new Mango(570,70,20);
-	mango5 = new Mango(550,50,20);
-	mango6 = new Mango(600,130,20);
-	mango7 = new Mango(650,130,30);
-	mango8 = new Mango(540,150,30);
-	mango9 = new Mango(510,130,30);
+	mango1 = new Mango(700,100,40,40);
+  mango2 = new Mango(760,130,40,40);
+	mango3 = new Mango(710,140,40,40);
+	mango4 = new Mango(570,70,40,40);
+	mango5 = new Mango(550,50,40,40);
+	mango6 = new Mango(600,130,40,40);
+	mango7 = new Mango(650,130,60,60);
+	mango8 = new Mango(540,150,60,60);
+	mango9 = new Mango(510,130,60,60);
 
 	//tree = new Tree(600,380);
 	ground = new Ground(width/2,460,width,20);
@@ -75,10 +75,7 @@ function draw() {
   mango6.display();
   mango7.display();
   mango8.display();
-  mango9.display();
-  
-  stone.display();
- 
+  mango9.display(); 
   sling.display();
 }
 
