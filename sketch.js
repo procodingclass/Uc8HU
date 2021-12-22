@@ -22,11 +22,11 @@ function preload(){
 }
 
 function setup() {
-	createCanvas(850, 470);
+  createCanvas(850, 470);
 	engine = Engine.create();
 	world = engine.world;
 
-	stone = new Stone(135,320,40); 
+  stone = new Stone(110,300,40); 
  
 
 	mango1 = new Mango(700,100,40,40);
@@ -39,11 +39,10 @@ function setup() {
 	mango8 = new Mango(540,150,60,60);
 	mango9 = new Mango(510,130,60,60);
 
-	//tree = new Tree(600,380);
 	ground = new Ground(width/2,460,width,20);
 
   //create sling with stone as bodyA
-  sling = new Sling(stone.body,{x:135,y:320});
+  sling = new Sling(stone.body,{x:110,y:300});
 
   var mouseObject = Mouse.create(canvas.elt);
   let options = {
@@ -53,6 +52,7 @@ function setup() {
   World.add(world, mConstraint);  
 
 	Engine.run(engine);
+
 }
 
 function draw() {
@@ -60,28 +60,46 @@ function draw() {
   background(230);
   Engine.update(engine);
   textSize(25);
-  text("Launch the stone when mouse is released!!",30 ,50);
+  text("Hit the mangoes with the stone!!",30 ,50);
   text("Press space to catch the stone!!",30 ,100);
-  image(boy ,100,240,200,300);
+  image(boy ,100,210,150,250);
   image(tree ,440,0,350,400);
-  
+
   stone.display();
- 
+
 
   mango1.display();
   mango2.display();
   mango3.display();
   mango4.display();
+  mango5.display();
   mango6.display();
   mango7.display();
   mango8.display();
-  mango9.display(); 
+  mango9.display();
+  
+  
+  ground.display();
   sling.display();
+
+if(mango1.overlap(stone.body.position.x,stone.body.position.y,stone.r,stone.r)){
+  Matter.Body.setStatic(mango1.body, false );
 }
+// check the overlap of the stone mango2 to mango9 
+// if they overlap, make the mango fall down
+
+
+
+
+
+
+
+}
+
 
 function keyPressed(){
   if(keyCode === 32){
-    Matter.Body.setPosition(stone.body,{x:135,y:320})
+    Matter.Body.setPosition(stone.body,{x:110,y:300})
     sling.attach(stone.body);
   }
 }
@@ -94,3 +112,4 @@ function mouseReleased()
 	
 }
 
+  

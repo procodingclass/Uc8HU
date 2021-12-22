@@ -22,4 +22,22 @@ class Mango{
 		image(this.image, 0,0,this.width, this.height);
 		pop();
  }
+
+
+ overlap(x2, y2, w2, h2) {
+    var x1 = this.body.position.x;
+    var y1 = this.body.position.y;
+    var w1 = this.width;
+    var h1 = this.height;
+    
+	// complete the function
+	// return false if bodies do not overlap
+	
+
+
+
+  }
+
 }
+
+

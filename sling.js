@@ -2,7 +2,8 @@ class Sling{
 	constructor(body,anchor)
 	{
 		
-		var options={ bodyA:body,			 
+		var options={ 
+			bodyA:body,			 
 			pointB:anchor, 
 			stiffness:0.004, 
 			length:10
